@@ -2233,10 +2233,13 @@ struct task_struct {
 	int ux_depth;
 	u64 enqueue_time;
 	u64 dynamic_ux_start;
+#endif /* OPLUS_FEATURE_UIFIRST */
 #ifdef CONFIG_CAMERA_OPT
         int camera_opt;
 #endif
-#endif /* OPLUS_FEATURE_UIFIRST */
+#ifdef CONFIG_ANDROID_SIMPLE_LMK
+	struct task_struct		*simple_lmk_next;
+#endif
 #ifdef CONFIG_OPLUS_FEATURE_FUSE_FS_SHORTCIRCUIT
 	struct fuse_package *fpack;
 #endif /* CONFIG_OPLUS_FEATURE_FUSE_FS_SHORTCIRCUIT */
