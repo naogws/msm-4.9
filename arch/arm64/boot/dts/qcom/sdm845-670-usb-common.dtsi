@@ -183,6 +183,7 @@
 		compatible = "qcom,usb-ssphy-qmp-dp-combo";
 		reg = <0x88e8000 0x3000>;
 		reg-names = "qmp_phy_base";
+		status = "disabled";
 		vdd-supply = <&pm8998_l1>;
 		core-supply = <&pm8998_l26>;
 		qcom,vdd-voltage-level = <0 880000 880000>;
