@@ -1,31 +1,28 @@
-#ifndef VENDOR_EDIT
-#PengNan@BSP.CHG.Basic 2019/03/15 modify for 18097
-#dts-dirs += al
-#dts-dirs += altera
-#dts-dirs += amd
-#dts-dirs += amlogic
-#dts-dirs += apm
-#dts-dirs += arm
-#dts-dirs += broadcom
-#dts-dirs += cavium
-#dts-dirs += exynos
-#dts-dirs += freescale
-#dts-dirs += hisilicon
-#dts-dirs += marvell
-#dts-dirs += mediatek
-#dts-dirs += nvidia
-#dts-dirs += qcom
-#dts-dirs += renesas
-#dts-dirs += rockchip
-#dts-dirs += socionext
-#dts-dirs += sprd
-#dts-dirs += xilinx
-#dts-dirs += lg
-#dts-dirs += zte
-#else
-
-dts-dirs += 19691
-#endif
+ifneq ($(CONFIG_ARCH_QCOM),y)
+dts-dirs += al
+dts-dirs += altera
+dts-dirs += amd
+dts-dirs += amlogic
+dts-dirs += apm
+dts-dirs += arm
+dts-dirs += broadcom
+dts-dirs += cavium
+dts-dirs += exynos
+dts-dirs += freescale
+dts-dirs += hisilicon
+dts-dirs += marvell
+dts-dirs += mediatek
+dts-dirs += nvidia
+dts-dirs += renesas
+dts-dirs += rockchip
+dts-dirs += socionext
+dts-dirs += sprd
+dts-dirs += xilinx
+dts-dirs += lg
+dts-dirs += zte
+else
+dts-dirs += qcom
+endif # CONFIG_ARCH_QCOM
 
 subdir-y	:= $(dts-dirs)
 
